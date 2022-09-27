@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Estrutura de Decisão IF</h1>
+    <h2>Exercício 2</h2>
+    <h6>Data: 05/09/2022</h6>
+    <br>
+    <p>Digite a quantidade de infrações que o motorista já cometeu:</p>
+    <input type="number" id="input_qtd_infracoes">   
+    <br><br>
+    <p>Digite o valor do carro:</p>
+    <input type="number" id="input_valor_carro">
+    <br>
+    <br>
+    <button onclick="calcular_seguro()">Calcular Seguro</button>
+    <br><br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function calcular_seguro(){
+        var infracoes = Number(input_qtd_infracoes.value)
+        var valor_seguro = Number(input_valor_carro.value) * 0.015
+        
+        if(infracoes<3){
+            valor_seguro = valor_seguro - (valor_seguro * 0.10)
+        }
+
+        div_resultado.innerHTML = 
+        `
+            Valor do seguro: R$${valor_seguro} 
+        `
+    }
+</script>

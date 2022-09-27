@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Estrutura de Decisão IF</h1>
+    <h2>Exercício 4</h2>
+    <h6>Data: 05/09/2022</h6>
+    <br>
+    <p>Quantas latinhas de refrigerante você toma por dia?</p>
+    <input type="number" id="input_qtd_latas">
+    <br><br>
+    <button onclick="calcular_refri_ano()">Quantos refris?</button>
+    <br><br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function calcular_refri_ano(){
+        var qtd_latas_ano = Number(input_qtd_latas.value) * 365
+        var cuide_se = "<br> Cuide melhor da sua saúde!"
+        var resultado = `Quantidade de latinhas que você consome por ano: ${qtd_latas_ano}`
+
+        if(qtd_latas_ano>=500){
+            resultado += cuide_se
+        }
+
+        div_resultado.innerHTML = resultado
+    }
+</script>

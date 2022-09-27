@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Estrutura de Decisão IF</h1>
+    <h2>Exercício 5</h2>
+    <h6>Data: 05/09/2022</h6>
+    <br>
+    <p>Digite a primeira nota:</p>
+    <input type="number" id="input_nota1">
+    <br><br>
+    <p>Digite a segunda nota:</p>
+    <input type="number" id="input_nota2">
+    <br><br>
+    <p>Digite a terceira nota:</p>
+    <input type="number" id="input_nota3">
+    <br><br>
+    <button onclick="analisar_desempenho()">Analisar Desempenho</button>
+    <br>
+    <br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function analisar_desempenho(){
+        var media = (Number(input_nota1.value) + Number(input_nota2.value) + Number(input_nota3.value)) / 3
+        var parabens = "<br> Parabéns, você é fora de série!"
+        var resultado_media = `Sua media foi de ${media.toFixed(1)}`
+
+        if(media>9.4){
+            resultado_media += parabens
+        }
+
+        div_resultado.innerHTML = resultado_media
+
+        //Também dá para resolver o exercício criando um if no final
+    }
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>ATIVIDADE: Javascript - Estrutura de Decisão IF</h1>
+    <h2>Exercício 3</h2>
+    <h6>Data: 05/09/2022</h6>
+    <br>
+    <p>Quantos filhos você tem?</p>
+    <input type="number" id="input_qtd_filhos">
+    <br><br>
+    <button onclick="verificar_situacao()">Verificar Situação</button>
+    <br><br>
+    <div id="resultado_situacao"></div>
+</body>
+</html>
+
+<script>
+    function verificar_situacao(){
+        var qtd_filhos = Number(input_qtd_filhos.value)
+
+        if(qtd_filhos == 0)
+        {
+            resultado_situacao.innerHTML = "Sem descendentes"
+        }
+
+        if(qtd_filhos == 1)
+        {
+            resultado_situacao.innerHTML = "Filho único"
+        }
+
+        if(qtd_filhos>=2)
+        {
+            resultado_situacao.innerHTML = "Crescei e multiplicai-vos!"
+        }
+    }
+</script>
